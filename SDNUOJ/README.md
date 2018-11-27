@@ -2,4 +2,4 @@
 
 直接在学校服务器上下载的
 
-尝试上传文件
+传送门：[SDNUOJ](http://www.acmicpc.sdnu.edu.cn/)
