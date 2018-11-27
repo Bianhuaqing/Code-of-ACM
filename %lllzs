@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+int queenpos[100];
+int n;
+void nqueen(int k) {
+	if (k == n) {
+		for (int i = 0; i<n; i++)
+			cout << queenpos[i] + 1 << " ";
+		cout << endl;
+		return;
+	}
+	for (int i = 0; i < n; i++) {
+		int spot = 1;
+		for (int j = 0; j < k; j++) {
+			if (queenpos[j] == i || abs(queenpos[j] - i) == abs(k - j)) {
+				spot = 0;
+				break;
+			}
+		}
+		if (spot) {
+			queenpos[k] = i;
+			nqueen(k + 1);
+		}
+	}
+}
+int main() {
+	cin >> n;
+	nqueen(0);
+	return 0;
+}
